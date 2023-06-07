@@ -1,0 +1,19 @@
+@import './base/_placeholders';
+@import './base/_mixins';
+@import './base/_vars';
+
+@import './blocks/header/_header';
+
+@import './blocks/introduction/_intro';
+
+@import './blocks/footer/_footer';
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.wrapper-page {
+    overflow: hidden;
+}

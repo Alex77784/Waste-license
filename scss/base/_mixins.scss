@@ -1,0 +1,20 @@
+@mixin container($max-width: 1470px) {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 15px;
+    border-right: 1px solid greenyellow;
+    border-left: 1px solid greenyellow;
+}
+
+@mixin adaptive-font($mblSize, $mktSize, $cntrSize: 1440) {
+    $difference: $mktSize - $mblSize;
+    $addMobSize: $difference * 2 * 0.7;
+
+    font-size: calc(#{$mblSize + px} + #{$difference} * (100vw / #{$cntrSize}));
+
+    @media (max-width:767px) {
+        font-size: calc(#{$mblSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$cntrSize}));
+    }
+
+}
