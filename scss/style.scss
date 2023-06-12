@@ -1,19 +1,34 @@
+@import './base/_fonts';
 @import './base/_placeholders';
 @import './base/_mixins';
 @import './base/_vars';
 
+// --------------------------------
 @import './blocks/header/_header';
+@import './blocks/header/_nav-burger';
 
 @import './blocks/introduction/_intro';
+@import './blocks/decide-task/_decide-task';
+@import './blocks/serviice/_service';
+@import './blocks/about-us/_about-us';
 
 @import './blocks/footer/_footer';
 
+// --------------------------------
 body {
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    color: black;
+    color: #202020;
+
+    &.active {
+        overflow: hidden;
+    }
 }
 
 .wrapper-page {
     overflow: hidden;
+}
+
+.container {
+    @include container;
 }

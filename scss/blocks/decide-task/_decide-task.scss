@@ -1,0 +1,128 @@
+.decide-task {
+    &__inner {
+        padding-top: 125px;
+
+        @include media-width992 {
+            padding-top: 50px;
+        }
+    }
+
+    &__title {
+        @include adaptive-font(18, 24);
+        @extend %title-h2;
+
+        @include media-width570 {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__subtitle {
+        @extend %subtitle;
+
+        @include media-width992 {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__box-contant {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        @include media-width992 {
+            justify-content: center;
+        }
+    }
+
+    @include media-width992 {
+        &__img::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    &__img>img {
+        width: 100%;
+    }
+
+    &__appeal-profit {
+        position: relative;
+        flex: 1 0 50%;
+        padding: 80px 0 0 13.4%;
+
+        @include media-width992 {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 350px;
+            padding: 0;
+        }
+
+        @media (max-width:375px) {
+            top: 53%;
+            width: 270px;
+        }
+    }
+
+    &__profit {
+        position: relative;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        padding-left: 45px;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #90E344 0%, #6CB42A 100%);
+
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: linear-gradient(0deg, #77D28C 0%, #345C58 106.47%);
+
+            position: absolute;
+            top: 50%;
+            left: 7.5px;
+            z-index: 3;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__profit:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.vert-line {
+    position: absolute;
+    top: 35%;
+    left: 14px;
+    height: 170px;
+    border-left: 1px dashed #202020;
+
+    @media (max-width:375px) {
+        height: 200px;
+    }
+}

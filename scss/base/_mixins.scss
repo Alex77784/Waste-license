@@ -1,13 +1,11 @@
-@mixin container($max-width: 1470px) {
+@mixin container($max-width: 1230px) {
     width: 100%;
     max-width: $max-width;
     margin: 0 auto;
     padding: 0 15px;
-    border-right: 1px solid greenyellow;
-    border-left: 1px solid greenyellow;
 }
 
-@mixin adaptive-font($mblSize, $mktSize, $cntrSize: 1440) {
+@mixin adaptive-font($mblSize, $mktSize, $cntrSize: 1230) {
     $difference: $mktSize - $mblSize;
     $addMobSize: $difference * 2 * 0.7;
 
@@ -16,5 +14,28 @@
     @media (max-width:767px) {
         font-size: calc(#{$mblSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$cntrSize}));
     }
+}
 
+@mixin media-width1100 {
+    @media (max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin media-width992 {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-width767 {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin media-width570 {
+    @media (max-width: 570px) {
+        @content;
+    }
 }

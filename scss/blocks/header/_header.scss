@@ -1,0 +1,88 @@
+.header {
+    position: relative;
+    z-index: 5;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        height: 100px;
+
+        @include media-width992 {
+            justify-content: space-between;
+        }
+    }
+
+    &__menu-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-left: 86px;
+        width: 100%;
+
+        @include media-width1100 {
+            margin-left: 50px;
+        }
+
+        @include media-width992 {
+            position: fixed;
+            top: 0;
+            right: -70%;
+
+            flex-direction: column;
+            row-gap: 35px;
+            width: 70%;
+            height: 100vh;
+            padding: 50px 0 35px;
+
+            background-color: white;
+            transition: $transition;
+            overflow: auto;
+        }
+
+        @include media-width767 {
+            width: 80%;
+            right: -80%;
+        }
+
+        @include media-width570 {
+            width: 100%;
+            right: -100%;
+        }
+    }
+
+    &__btn {
+        @include adaptive-font(16, 24);
+        font-weight: 500;
+        color: black;
+
+        background: linear-gradient(to left, $light-yellow, $btn-gradient-t 100%) no-repeat;
+        background-position: 100% 100%;
+        background-size: 0 2px;
+        padding-bottom: 5px;
+        transition: $transition;
+
+        &:hover {
+            background-size: 100% 2px;
+        }
+
+        &::after {
+            content: url('../images/icons/phone.svg');
+            display: inline-block;
+        }
+
+        &:hover::after {
+            animation: wiggle 0.05s alternate ease infinite;
+        }
+    }
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(50deg);
+    }
+}

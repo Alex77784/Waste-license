@@ -1,1 +1,1 @@
-# Waste-license
+https://alex77784.github.io/Waste-license/
