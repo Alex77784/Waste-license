@@ -11,6 +11,8 @@
 @import './blocks/decide-task/_decide-task';
 @import './blocks/serviice/_service';
 @import './blocks/about-us/_about-us';
+@import './blocks/ready-compn/_ready-compn';
+@import './blocks/appearing-questions/_appearing-questions';
 
 @import './blocks/footer/_footer';
 
@@ -25,10 +27,32 @@ body {
     }
 }
 
-.wrapper-page {
+.wrapper {
     overflow: hidden;
 }
 
 .container {
     @include container;
+    border-right: 2px solid red;
+    border-left: 2px solid red;
+}
+
+.leave-button {
+    width: 300px;
+    height: 55px;
+    background: linear-gradient(180deg, $btn-gradient-t 0%, $btn-gradient-b 100%);
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    transition: transform 0.1s linear;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    @include media-width570 {
+        width: 250px;
+    }
 }

@@ -1,9 +1,9 @@
 .about-us {
     &__inner {
-        padding-top: 120px;
+        padding: 120px 0;
 
         @include media-width992 {
-            padding-top: 50px;
+            padding: 50px 0;
         }
     }
 
