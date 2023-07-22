@@ -10,3 +10,17 @@
     text-align: center;
     line-height: 22px;
 }
+
+%box-dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+%control {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+}

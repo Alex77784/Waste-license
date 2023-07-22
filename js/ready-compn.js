@@ -40,6 +40,7 @@ function changeWidhtWnw() {
     quantityScroll = Math.ceil(amountCards / showCards);
     boxControl.innerHTML = '';
     createDot(quantityScroll);
+    changeWidhtWnwRew();
 }
 
 function shiftL() {

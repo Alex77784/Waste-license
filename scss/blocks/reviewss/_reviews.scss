@@ -1,0 +1,122 @@
+.reviews {
+    background-color: white;
+
+    &__inner {
+        padding: 100px 0;
+
+        @include media-width767 {
+            padding: 50px 0;
+        }
+
+        @include media-width570 {
+            padding: 30px;
+        }
+    }
+
+    &__title {
+        @include adaptive-font(18, 24);
+        @extend %title-h2;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        @extend %subtitle;
+        margin-bottom: 70px;
+
+        @include media-width767 {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        column-gap: 20px;
+        overflow: auto;
+        scroll-behavior: smooth;
+        margin-bottom: 30px;
+
+        @media (max-width: 1035px) {
+            width: 80%;
+            margin: 0 auto 30px;
+        }
+
+        @include media-width992 {
+            width: 90%;
+        }
+
+        @include media-width767 {
+            width: 62%;
+        }
+
+        @include media-width570 {
+            width: 100%;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__card {
+        flex-shrink: 0;
+        width: 32%;
+        min-height: 350px;
+        border-radius: 10px;
+        border: 1px solid #e7e7e7;
+        padding: 30px 20px;
+        margin-bottom: 10px;
+
+        @media (max-width: 1035px) {
+            width: 48.4%;
+            margin: 0 auto;
+        }
+
+        @include media-width767 {
+            width: 100%;
+            min-height: 250px;
+        }
+    }
+
+    &__introduced {
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__name {
+        margin-bottom: 7px;
+    }
+
+    &__position {
+        font-weight: 300;
+        font-size: 14px;
+        color: #5c5c5c;
+    }
+
+    &__review {
+        line-height: 20px;
+        @include adaptive-font(16, 14);
+
+        @include media-width570 {
+            text-align: justify;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__box-controls {
+        @extend %box-dots;
+    }
+
+    &__control {
+        @extend %control;
+        background-color: #e7e7e7;
+
+        &.active {
+            background: linear-gradient(180deg, #90E344 0%, #6CB42A 100%);
+        }
+    }
+
+}

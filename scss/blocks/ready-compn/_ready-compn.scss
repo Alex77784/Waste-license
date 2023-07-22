@@ -61,10 +61,7 @@
     }
 
     &__box-controls {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        @extend %box-dots;
 
         @media (max-width:375px) {
             display: none;
@@ -72,15 +69,13 @@
     }
 
     &__control {
-        width: 15px;
-        height: 15px;
-        background-color: white;
-        border-radius: 50%;
+        @extend %control;
+
+        &.active {
+            background: linear-gradient(180deg, #90E344 0%, #6CB42A 100%);
+        }
     }
 
-    &__control.active {
-        background: linear-gradient(180deg, #90E344 0%, #6CB42A 100%);
-    }
 }
 
 .slider {

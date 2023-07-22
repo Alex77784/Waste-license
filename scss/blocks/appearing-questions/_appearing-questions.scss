@@ -1,15 +1,21 @@
 .appearing-questions {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 10px 34px 0px #6CB42A1A;
 
     &__inner {
         display: flex;
         justify-content: center;
-        box-shadow: 0px 10px 34px 0px #6CB42A1A;
         background-color: #fff;
         position: relative;
         padding: 100px 0 20px;
 
+        @include media-width767 {
+            padding: 50px;
+        }
+
         @include media-width570 {
-            padding: 0;
+            padding: 0px;
         }
     }
 
@@ -19,6 +25,7 @@
         margin: 0 0 80px 40px;
 
         @include media-width992 {
+            flex: 0 1 50%;
             margin: 0 0 40px 0;
             text-align: center;
             position: relative;
@@ -66,7 +73,7 @@
 
     &__img {
         position: absolute;
-        bottom: 5px;
+        bottom: 0;
         right: -50px;
         z-index: 0;
 
