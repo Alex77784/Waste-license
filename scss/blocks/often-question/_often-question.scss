@@ -1,0 +1,130 @@
+.often-questions {
+
+    &__inner {
+        padding-top: 100px;
+        position: relative;
+
+        @include media-width992 {
+            padding-top: 30px;
+        }
+    }
+
+    &__inner>img {
+        position: absolute;
+        left: -90px;
+        top: 65px;
+
+        @include media-width992 {
+            top: 20px;
+        }
+
+        @include media-width570 {
+            display: none;
+        }
+    }
+
+    &__title {
+        @include adaptive-font(18, 24);
+        @extend %title-h2;
+    }
+
+    &__subtitle {
+        @extend %subtitle;
+        margin-bottom: 50px;
+
+        @include media-width570 {
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+    }
+
+    &__box-col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @include media-width992 {
+            justify-content: center;
+        }
+    }
+
+    &__col-img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        &>img {
+            width: 100%;
+
+            @include media-width1100 {
+                width: 93%;
+            }
+
+            @include media-width992 {
+                width: 100%;
+            }
+        }
+
+        @include media-width992 {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+        }
+
+        @include media-width570 {
+            width: 100%;
+        }
+    }
+
+    &__block-filling {
+        flex: 0 1 50%;
+        min-height: 300px;
+
+        @include media-width992 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    &__col-question {
+        flex: 0 1 43%;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+
+        @include media-width1100 {
+            flex: 0 1 40%;
+        }
+
+        @include media-width992 {
+            flex: 0 1 500px;
+            justify-content: left;
+        }
+
+        @include media-width570 {
+            flex: 0 1 100%;
+            justify-content: left;
+        }
+    }
+
+
+    &__question {
+        line-height: 1.3;
+        font-size: 14px;
+        position: relative;
+    }
+
+    &__question>span {
+        display: inline-block;
+        font-size: 30px;
+        transform: rotate(45deg);
+        color: $light-green;
+
+        position: relative;
+        top: -5px;
+        right: 5px;
+    }
+}
