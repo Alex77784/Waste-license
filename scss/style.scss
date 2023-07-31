@@ -15,6 +15,7 @@
 @import './blocks/appearing-questions/_appearing-questions';
 @import './blocks/reviewss/_reviews';
 @import './blocks/often-question/_often-question';
+@import './blocks/contacts/_contacts';
 
 @import './blocks/footer/_footer';
 
@@ -46,10 +47,11 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: white;
-    transition: transform 0.1s linear;
+    transition: all 0.1s linear;
 
     &:hover {
-        box-shadow: 5px 0 5px 5px black;
+        box-shadow: 0 3px 5px 1px $btn-gradient-t;
+        transform: scale(1.02);
     }
 
     @include media-width570 {
