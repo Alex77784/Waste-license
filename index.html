@@ -20,11 +20,11 @@
                     </a>
                     <div class="header__menu-mobile">
                         <nav class="header__nav nav">
-                            <a href="#" class="nav__link">Услуги</a>
-                            <a href="#" class="nav__link">О нас</a>
-                            <a href="#" class="nav__link">Готовые компании</a>
-                            <a href="#" class="nav__link">Отзывы</a>
-                            <a href="#" class="nav__link">Контакты</a>
+                            <a href="#service" class="nav__link">Услуги</a>
+                            <a href="#about-us" class="nav__link">О нас</a>
+                            <a href="#ready-companies" class="nav__link">Готовые компании</a>
+                            <a href="#reviews" class="nav__link">Отзывы</a>
+                            <a href="#contacts" class="nav__link">Контакты</a>
                         </nav>
                         <a href="tel:+78009353458" class="header__btn">
                             +7 (800) 935-34-58
@@ -38,6 +38,7 @@
                 </div>
             </div>
         </header>
+
         <main class="main">
             <section class="introduction">
                 <div class="container">
@@ -49,7 +50,8 @@
                             <p class="intro__text-descr">
                                 Сбор, транспортирование, обработка, утилизация и обезвреживание отходов.
                             </p>
-                            <button class="intro__button leave-button">Оставить заявку</button>
+                            <button class="intro__button leave-application leave-application-js">Оставить
+                                заявку</button>
                         </div>
                     </div>
                 </div>
@@ -86,7 +88,7 @@
             <section class="service">
                 <div class="container">
                     <div class="service__inner">
-                        <h2 class="service__title">
+                        <h2 class="service__title" id="service">
                             Услуги, которые мы предоставляем
                         </h2>
                         <h3 class="service__subtitle">
@@ -151,7 +153,7 @@
             <section class="about-us">
                 <div class="container">
                     <div class="about-us__inner">
-                        <h2 class="about-us__title">
+                        <h2 class="about-us__title" id="about-us">
                             О нас
                         </h2>
                         <h3 class="about-us__subtitle">
@@ -209,7 +211,7 @@
             <section class="ready-companies">
                 <div class="container">
                     <div class="ready-companies__inner">
-                        <h2 class="ready-companies__title">
+                        <h2 class="ready-companies__title" id="ready-companies">
                             Готовые компании
                         </h2>
                         <h3 class="ready-companies__subtitle">
@@ -291,7 +293,9 @@
                                 Оставьте заявку, нажав на кнопку, и мы БЕСПЛАТНО проконсультируем вас и ответим на все
                                 вопросы
                             </div>
-                            <button class="appearing-questions__button leave-button">Оставить заявку</button>
+                            <button class="appearing-questions__button leave-application leave-application-js">
+                                Оставить заявку
+                            </button>
                         </div>
                         <div class="appearing-questions__block-filling"></div>
                         <div class="appearing-questions__img">
@@ -303,7 +307,7 @@
             <section class="reviews">
                 <div class="container">
                     <div class="reviews__inner">
-                        <h2 class="reviews__title">
+                        <h2 class="reviews__title" id="reviews">
                             Отзывы
                         </h2>
                         <h3 class="reviews__subtitle">
@@ -451,7 +455,7 @@
             <section class="contacts">
                 <div class="container">
                     <div class="contacts__inner">
-                        <h2 class="contacts__title">
+                        <h2 class="contacts__title" id="contacts">
                             Контакты
                         </h2>
                         <h3 class="contacts__subtitle">
@@ -479,7 +483,7 @@
                                     <a href="mailto:companywerty@mail.com">companywerty@mail.com</a>
                                 </li>
                                 <li>
-                                    <a href="tel:88004352453">8(800)4352453</a>
+                                    <a href="tel:88004352453">8(800)435-24-53</a>
                                 </li>
                             </ul>
                         </div>
@@ -495,11 +499,11 @@
                     </a>
                     <div class="footer__menu-mobile">
                         <nav class="footer__nav">
-                            <a href="#" class="footer__link">Услуги</a>
-                            <a href="#" class="footer__link">О нас</a>
-                            <a href="#" class="footer__link">Готовые компании</a>
-                            <a href="#" class="footer__link">Отзывы</a>
-                            <a href="#" class="footer__link">Контакты</a>
+                            <a href="#service" class="footer__link">Услуги</a>
+                            <a href="#about-us" class="footer__link">О нас</a>
+                            <a href="#ready-companies" class="footer__link">Готовые компании</a>
+                            <a href="#reviews" class="footer__link">Отзывы</a>
+                            <a href="#contacts" class="footer__link">Контакты</a>
                         </nav>
                     </div>
                     <a href="tel:+78009353458" class="footer__btn">
@@ -508,14 +512,46 @@
                 </div>
                 <ul class="footer__security">
                     <li class="footer__col-left">2023. Все права защищены</li>
-                    <li class="footer__col-right">Политика конфиденциальности</li>
+                    <li class="footer__col-right">
+                        <a href="https://revuzor.ru/storage/privacy_policy.pdf" target="_blank">
+                            Политика конфиденциальности
+                        </a>
+                    </li>
                 </ul>
             </div>
         </footer>
+
+        <div class="pop-up">
+            <div class="pop-up__img-box">
+                <img src="./images/pop-up.svg" alt="picture">
+            </div>
+            <div class="pop-up__content-box">
+                <h2 class="pop-up__title">
+                    оставить заявку
+                </h2>
+                <h3 class="pop-up__subtitle">
+                    Введите ваши данные <br> и нажмите на кнопку
+                </h3>
+                <form name="getPhone">
+                    <input type="text" name="user" class="pop-up__input" placeholder="Имя">
+                    <input type="tel" name="phone" class="pop-up__input" placeholder="Телефон">
+                    <button type="submit" class="pop-up__btn leave-application">Отправить</button>
+                </form>
+                <p class="pop-up__confidentiality">
+                    Нажимая на кнопку «Отправить» вы соглашаетесь <br> с
+                    <a href="https://revuzor.ru/storage/privacy_policy.pdf" target="_blank">
+                        политикой конфиденциальности
+                    </a>
+                </p>
+            </div>
+            <button class="pop-up__close-popup">X</button>
+        </div>
     </div>
+
     <script src="./js/variables.js"></script>
     <script src="./js/functions.js"></script>
     <script src="./js/ready-compn.js"></script>
+    <script src="./js/leave-application.js"></script>
     <script src="./js/reviews.js"></script>
     <script src="./js/script.js"></script>
 </body>

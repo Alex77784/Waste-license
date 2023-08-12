@@ -18,6 +18,7 @@
 @import './blocks/contacts/_contacts';
 
 @import './blocks/footer/_footer';
+@import './blocks/pop-up/_pop-up';
 
 // --------------------------------
 body {
@@ -30,6 +31,10 @@ body {
     }
 }
 
+body.active {
+    overflow: hidden;
+}
+
 .wrapper {
     overflow: hidden;
 }
@@ -38,7 +43,7 @@ body {
     @include container;
 }
 
-.leave-button {
+.leave-application {
     width: 300px;
     height: 55px;
     background: linear-gradient(180deg, $btn-gradient-t 0%, $btn-gradient-b 100%);

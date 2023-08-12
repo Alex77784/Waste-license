@@ -51,7 +51,7 @@
         font-weight: 500;
         color: black;
 
-        background: linear-gradient(to left, $light-green, $light-yellow 100%) no-repeat;
+        background: linear-gradient(to left, $btn-gradient-b, $btn-gradient-t 100%) no-repeat;
         background-position: 0 100%;
         background-size: 0 2px;
         padding-bottom: 5px;
@@ -64,7 +64,7 @@
 
 
     &__btn {
-        @include adaptive-font(16, 24);
+        @include adaptive-font(20, 24);
         font-weight: 500;
         color: black;
 
@@ -101,6 +101,10 @@
             flex-direction: column;
             row-gap: 20px;
             align-items: center;
+        }
+
+        & a {
+            color: black;
         }
     }
 }
