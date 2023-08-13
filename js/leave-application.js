@@ -37,7 +37,7 @@ function sentOnTelegram(e) {
 
         setTimeout(function () {
             document.querySelector('#message-del').remove();
-        }, 3800)
+        }, 2400)
     }
 }
 
@@ -69,7 +69,7 @@ function validatePhone() {
     if (/\+?[0-9]{10,15}/.test(inputPhone.value)) {
 
     } else {
-        inputPhone.value = 'Введите номер телефона в формате +x(xxx)... ';
+        inputPhone.value = '+X (XXX) XXX-XX-XX';
         inputPhone.style.color = 'red';
         flag = false;
     }
