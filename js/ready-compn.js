@@ -70,3 +70,27 @@ function toggleByDots(event) {
         slider.scrollTo((slider.offsetWidth) * locationSlider, 0);
     }
 }
+
+// view-Card ===========================================================================
+
+slider.addEventListener('click', viewCard);
+function viewCard(event) {
+    if (event.target.closest('.slider__card')) {
+        let img = event.target.offsetParent;
+        bodyLock.classList.add('active');
+        let viewCard = `
+        <div class="view-card">
+            <div>
+                ${img.children[0].outerHTML}
+                ${img.children[1].outerHTML}
+            </div>
+        </div>
+        `;
+
+        slider.insertAdjacentHTML('afterbegin', viewCard);
+    }
+    document.querySelector('.view-card>div').addEventListener('click', function () {
+        this.classList.add('active')
+        setTimeout(() => document.querySelector('.view-card').remove(), 500);
+    });
+}

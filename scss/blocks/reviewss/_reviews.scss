@@ -46,6 +46,7 @@
 
         @include media-width767 {
             width: 62%;
+            align-items: flex-start;
         }
 
         @include media-width570 {

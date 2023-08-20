@@ -69,7 +69,7 @@ function validatePhone() {
     if (/\+?[0-9]{10,15}/.test(inputPhone.value)) {
 
     } else {
-        inputPhone.value = '+X (XXX) XXX-XX-XX';
+        inputPhone.value = '+X XXX XXX XX XX';
         inputPhone.style.color = 'red';
         flag = false;
     }
