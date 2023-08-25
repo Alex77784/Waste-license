@@ -52,7 +52,7 @@
     }
 
     &__btn {
-        @include adaptive-font(16, 24);
+        @include adaptive-font(20, 24);
         font-weight: 500;
         color: black;
 

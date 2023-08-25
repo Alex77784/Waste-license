@@ -90,7 +90,8 @@ function viewCard(event) {
         slider.insertAdjacentHTML('afterbegin', viewCard);
     }
     document.querySelector('.view-card>div').addEventListener('click', function () {
-        this.classList.add('active')
+        this.classList.add('active');
+        bodyLock.classList.remove('active');
         setTimeout(() => document.querySelector('.view-card').remove(), 500);
     });
 }

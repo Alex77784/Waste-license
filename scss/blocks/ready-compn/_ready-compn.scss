@@ -99,8 +99,11 @@
     @media (max-width:375px) {
         overflow: auto;
         padding-bottom: 15px;
-
         width: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     @include media-width570 {
