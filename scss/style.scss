@@ -1,0 +1,61 @@
+@import './base/_fonts';
+@import './base/_placeholders';
+@import './base/_mixins';
+@import './base/_vars';
+
+// --------------------------------
+@import './blocks/header/_header';
+@import './blocks/header/_nav-burger';
+
+@import './blocks/introduction/_intro';
+@import './blocks/decide-task/_decide-task';
+@import './blocks/serviice/_service';
+@import './blocks/about-us/_about-us';
+@import './blocks/ready-compn/_ready-compn';
+@import './blocks/appearing-questions/_appearing-questions';
+@import './blocks/reviewss/_reviews';
+@import './blocks/often-question/_often-question';
+@import './blocks/contacts/_contacts';
+
+@import './blocks/footer/_footer';
+@import './blocks/pop-up/_pop-up';
+
+// --------------------------------
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #202020;
+
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container {
+    @include container;
+}
+
+.leave-application {
+    width: 300px;
+    height: 55px;
+    background: linear-gradient(180deg, $btn-gradient-t 0%, $btn-gradient-b 100%);
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.1s linear;
+
+    &:hover {
+        box-shadow: 0 3px 5px 1px $btn-gradient-t;
+        transform: scale(1.02);
+    }
+
+    @include media-width570 {
+        width: 250px;
+    }
+}

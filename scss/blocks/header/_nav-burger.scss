@@ -1,0 +1,101 @@
+.nav {
+    display: flex;
+    column-gap: 40px;
+
+    @include media-width1100 {
+        column-gap: 25px;
+    }
+
+    @include media-width992 {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 30px;
+    }
+
+    @include media-width767 {
+        row-gap: 25px;
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 500;
+        color: black;
+
+        background: linear-gradient(to left, $light-green, $light-yellow 100%) no-repeat;
+        background-position: 0 100%;
+        background-size: 0 2px;
+        padding-bottom: 5px;
+        transition: $transition;
+
+        @include media-width992 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        &:hover {
+            background-size: 100% 2px;
+        }
+    }
+}
+
+.burger {
+    position: relative;
+    display: none;
+
+    @include media-width992 {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    &__line {
+        position: absolute;
+        right: 0;
+        transition: $transition;
+        background-color: black;
+        height: 2px;
+
+        &:first-child {
+            top: 0;
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+            width: 100%;
+        }
+
+        &:last-child {
+            top: 100%;
+            width: 100%;
+        }
+    }
+}
+
+// add class active
+.header__inner.active .burger {
+    margin-right: 20px;
+}
+
+.header__inner.active .burger__line {
+    &:first-child {
+        width: 100%;
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    &:last-child {
+        width: 100%;
+        top: 50%;
+        transform: rotate(45deg);
+    }
+}
+
+.header__inner.active .header__menu-mobile {
+    right: 0;
+}

@@ -1,0 +1,110 @@
+.footer {
+    background: linear-gradient(175deg, #E3FF9B 13.07%, #9CFDBA 83.21%);
+    padding: 30px 0 20px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @include media-width992 {
+            align-items: start;
+        }
+
+        @include media-width767 {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 25px;
+        }
+    }
+
+    &__logo {
+        @include media-width767 {
+            order: 1;
+        }
+    }
+
+    &__menu-mobile {
+        @include media-width767 {
+            order: 3;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        column-gap: 40px;
+
+        @include media-width1100 {
+            column-gap: 25px;
+        }
+
+        @include media-width992 {
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: center;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 500;
+        color: black;
+
+        background: linear-gradient(to left, $btn-gradient-b, $btn-gradient-t 100%) no-repeat;
+        background-position: 0 100%;
+        background-size: 0 2px;
+        padding-bottom: 5px;
+        transition: $transition;
+
+        &:hover {
+            background-size: 100% 2px;
+        }
+    }
+
+
+    &__btn {
+        @include adaptive-font(20, 24);
+        font-weight: 500;
+        color: black;
+
+        background: linear-gradient(to left, $light-yellow, $btn-gradient-t 100%) no-repeat;
+        background-position: 100% 100%;
+        background-size: 0 2px;
+        padding-bottom: 5px;
+        transition: $transition;
+
+        &:hover {
+            background-size: 100% 2px;
+        }
+
+        &::after {
+            content: url('../images/icons/phone.svg');
+            display: inline-block;
+        }
+
+        &:hover::after {
+            animation: wiggle 0.05s alternate ease infinite;
+        }
+
+        @include media-width767 {
+            order: 2;
+        }
+    }
+
+    &__security {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+
+        @include media-width570 {
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: center;
+        }
+
+        & a {
+            color: black;
+        }
+    }
+}
